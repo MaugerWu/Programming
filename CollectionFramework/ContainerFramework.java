@@ -51,3 +51,13 @@ public class ContainerFramework
 		System.out.println(fill(new LinkedHashMap<String, String>()));
 	}
 }
+
+// 打印结果
+[pig, dog, cat, dog, duck]
+[pig, dog, cat, dog, duck]
+[duck, cat, dog, pig]
+[cat, dog, duck, pig]
+[pig, dog, cat, duck]
+{duck=Yellow, cat=Gray, dog=White, pig=White}
+{cat=Gray, dog=White, duck=Yellow, pig=White}
+{pig=White, dog=White, cat=Gray, duck=Yellow}
