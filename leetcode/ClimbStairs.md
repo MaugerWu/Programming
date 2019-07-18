@@ -97,6 +97,29 @@ class Solution {
 }
 ```
 
+- 测试用例：45个（1~45）
+- 执行用时：1ms
+- 内存消耗：33.2MB
+- 时间复杂度：O(n)
+- 空间复杂度：O(n)
+
+```java
+class Solution {
+    public int climbStairs(int n) {
+        if (n < 3) {
+            return n;
+        }
+        int[] dp = new int[n + 1];
+        dp[1] = 1;
+        dp[2] = 2;
+        for (int i = 3; i <= n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        return dp[n];
+    }
+}
+```
+
 ## 方法三：斐波那契公式题解
 
 ![](https://gss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=2c04bf8f174c510fae91ea1c50690915/b21bb051f81986189d3a8ec347ed2e738bd4e67c.jpg)
