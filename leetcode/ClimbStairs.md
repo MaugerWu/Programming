@@ -124,3 +124,17 @@ class Solution {
 
 ![](https://gss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=2c04bf8f174c510fae91ea1c50690915/b21bb051f81986189d3a8ec347ed2e738bd4e67c.jpg)
 
+- 测试用例：45个（1~45）
+- 执行用时：1ms
+- 内存消耗：33.6MB
+- 时间复杂度：O(log(n))，Math.pow(double a, double b) 方法将会用去 log(n) 的时间
+- 空间复杂度：O(n)
+
+```java
+class Solution {
+    public int climbStairs(int n) {
+    	double sqrt5 = Math.sqrt(5);
+    	double fibN = Math.pow((1 + sqrt5) / 2, n + 1) - Math.pow((1 - sqrt5) / 2, n + 1);
+    	return (int) (fibN / sqrt5);
+}
+```
