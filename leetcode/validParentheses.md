@@ -59,7 +59,7 @@ class Solution {
 
 ## 方法一：利用 string.contains() 与 string.replace() 方法题解
 
-- 测试用例：29个
+- 测试用例：76个
 - 执行用时：184ms
 - 内存消耗：65MB
 
@@ -78,8 +78,35 @@ class Solution {
 
 ## 方法二：利用栈 Stack 题解
 
-- 测试用例：个
-- 执行用时：ms
-- 内存消耗：MB
+- 测试用例：76个
+- 执行用时：7ms
+- 内存消耗：34.6MB
 
+```java
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<Character>();
+		for (int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if (c == '{' || c == '(' || c == '[') {
+				stack.push(c);
+			} else {
+				if (stack.isEmpty()) {
+					return false;
+				}
+				char top = stack.pop();
+				if (c == '}' && top != '{') {
+					return false;
+				}
+				if (c == ')' && top != '(') {
+					return false;
+				}
+				if (c == ']' && top != '[') {
+					return false;
+				}
+			}
+		}
+		return stack.isEmpty();
+    }
+}
 ```
