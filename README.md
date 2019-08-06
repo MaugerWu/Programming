@@ -26,6 +26,7 @@ Java Programming
 ### 中等
 
 - [LeetCode-2.两数相加](https://github.com/MaugerWu/Programming/blob/master/leetcode/addTwoNumbers.md)
+- [LeetCOde-1116.打印零与奇偶数（多线程）](https://github.com/MaugerWu/Programming/blob/master/leetcode/printZeroEvenOdd.md)
 
 ### 困难
 
